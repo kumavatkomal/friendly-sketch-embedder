@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #D7E3FC, #EAD7F6, #FDEBD3);
+    color: #4A4A4A;
+    text-align: center;
+    padding: 20px;
+    transition: background 0.5s ease-in-out;
+}
+
+/* 🎨 Stylish Animated Header */
+header {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #5D5FEF, #9E78CF, #F59D9D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+.icon {
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: initial;
+}
+
+/* 💫 Shrink & Rotate Effect on Hover */
+h1:hover {
+    transform: scale(0.95) rotate(-2deg);
+}
+
+/* 📦 Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+label {
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 12px;
+    text-align: left;
+    color: #5A5560;
+}
+
+/* 📝 Inputs & Textarea */
+input, textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* 🔘 Stylish Buttons */
+button {
+    background: linear-gradient(to right, #FEC89A, #FFAFCC);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease-in-out, background 0.3s, box-shadow 0.3s;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 💦 Ripple Effect */
+button::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease-out;
+}
+
+button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* 🚀 Button Hover & Active State */
+button:hover {
+    background: linear-gradient(to right, #FFAFCC, #FEC89A);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+    width: 600px;
+    height: 400px;
+    border: 2px solid #6B5B95;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

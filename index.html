@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Sketch Embedder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><span class="icon">🎨</span> p5.js Sketch Embedder</h1>
+
+        <p>Generate an embed code for your p5.js sketch</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <label for="sketch-url">Sketch URL:</label>
+            <input type="text" id="sketch-url" placeholder="Enter your p5.js sketch URL">
+
+            <label for="width">Width:</label>
+            <input type="number" id="width" placeholder="600" value="600">
+
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="400" value="400">
+
+            <button id="generate-btn">Generate Embed Code</button>
+
+            <h3>Embed Code:</h3>
+            <textarea id="embed-code" readonly></textarea>
+            <button id="copy-btn">Copy Code</button>
+        </div>
+
+        <h3>Live Preview:</h3>
+        <iframe id="preview"></iframe>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
